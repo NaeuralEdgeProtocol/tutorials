@@ -6,7 +6,9 @@ class SimpleMessageHandler:
   def heartbeat_handler(self, session: Session, node_address: str, heartbeat_data: dict):
     node_alias = heartbeat_data.get(PAYLOAD_DATA.EE_ID)
     cpu_info = heartbeat_data.get(HEARTBEAT_DATA.CPU)
-    session.P(f"Received hb from '{node_alias}' <{node_address}> with CPU info: '{cpu_info}'")
+    session.P("Received hb from '{}' <{}> with CPU info: '{}'".format(
+      node_alias, node_address, cpu_info
+    ))
     return
   
   
