@@ -1,0 +1,20 @@
+{
+  "name" : "Naeural Edge Protocol SDK Development Container",
+  "dockerFile" : "Dockerfile",
+  
+  "runArgs": [
+    //"--gpus=all",
+    "--hostname",
+    "sdk_dev"    
+  ],
+
+
+  "customizations": {
+    "vscode" : {
+      "extensions": [
+        "ms-python.python",
+        "ms-toolsai.jupyter"
+      ]
+    }
+  }
+}

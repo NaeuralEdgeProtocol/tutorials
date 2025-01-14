@@ -1,0 +1,20 @@
+# Simple ultr-lightweight image for python development
+# Use the latest Python 3 slim image for a lightweight base
+FROM python:3.11-slim
+
+# Set the working directory
+WORKDIR /workspace
+
+# Install system dependencies required for some Python packages
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    build-essential \
+    libffi-dev \
+    libssl-dev \
+    git \
+    && rm -rf /var/lib/apt/lists/*
+
+# Install the SDK requirements
+RUN pip install --no-cache-dir naeural_client
+
+# Set the default command to bash (optional)
+CMD ["bash"]
