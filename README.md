@@ -40,5 +40,28 @@ sess.sleep(10)
 sess.close()
 ```
 
+## Episode #3 - Using devcontainer and self-configuration
+
+We create a `Dockerfile` and a `devcontainer.json` file to create a development container for our project. Strting with version 
+
+
+Lets modify the initial example by adding now a extra callback for payload processing and no matter if the payload is encrypted or not we can still see some basic protocol info.
+```python
+
+def payload_handler(
+    session: Session, 
+    node_addr : str, 
+    pipeline_name : str, 
+    plugin_signature : str, 
+    plugin_instance : str,  
+    data : Payload      
+  ):
+  msg = f"Received payload from {node_addr} on pipeline {pipeline_name} with plugin {plugin_signature} and instance {plugin_instance}"
+  session.P(msg)
+  return
+...
+session = Session(on_heartbeat=hb_handler, on_payload=payload_handler)
+...
+```
 
 
