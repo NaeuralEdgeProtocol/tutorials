@@ -1,5 +1,6 @@
 {
   "name" : "Naeural Edge Protocol SDK Development Container",
+  
   "dockerFile" : "Dockerfile",
   
   "runArgs": [
@@ -7,6 +8,12 @@
     "--hostname",
     "sdk_dev"    
   ],
+
+
+ "mounts": [
+    "source=naeural-sdk-config,target=/root/.naeural,type=volume"
+  ]
+
 
   "customizations": {
     "vscode" : {
