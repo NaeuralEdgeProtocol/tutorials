@@ -1,4 +1,5 @@
-# Video Episodes
+
+# Video Episodes for the ratio1's Naeural Edge Protocol SDK
 
 ## Episode #1 - Introduction
 
@@ -18,8 +19,10 @@ We test the network using the `nepctl` command line interface
 nepctl get nodes
 ```
 
-> Starting with version 3 the `nepctl` will not require additional initial configuration as it will automatically connect and self-authenticate with the network.
-> For versions 2 and below at the first run we'll be required to edit the `~/.nepctl/config` file and put in the template the credentials .
+> Starting with version 2.6 the `nepctl` will not require additional initial configuration as it will automatically connect and self-authenticate with the network.
+> For versions 2.5 and below at the first run we'll be required to edit the `~/.nepctl/config` file and put in the template the credentials .
+
+
 
 ## Episode #2 - Basic connect and passively check nodes
 
@@ -40,10 +43,18 @@ sess.sleep(10)
 sess.close()
 ```
 
+
+---
+
 ## Episode #3 - Using devcontainer and self-configuration
 
-We create a `Dockerfile` and a `devcontainer.json` file to create a development container for our project. Strting with version 
+We create a `Dockerfile` and a `devcontainer.json` file to create a development container for our project.
+As promissed version 2.6 is here so now the configuration is done automatically by the SDK.
 
+
+---
+
+## Episode #4 - Basic Filtering
 
 Lets modify the initial example by adding now a extra callback for payload processing and no matter if the payload is encrypted or not we can still see some basic protocol info.
 ```python
@@ -64,7 +75,16 @@ session = Session(on_heartbeat=hb_handler, on_payload=payload_handler)
 ...
 ```
 
-## Episode #4 - Filtering for target node messages
+
+---
+
+## Episode #5 - Advanced filtering
+
+
+
+---
+
+## Episode #6 - First deployment
 
 
 

@@ -4,15 +4,14 @@
   "dockerFile" : "Dockerfile",
   
   "runArgs": [
-    //"--gpus=all",
+    //"--gpus=all", // Uncomment this line to enable GPU support
     "--hostname",
-    "sdk_dev"    
+    "nepsdk"    
   ],
-
 
  "mounts": [
     "source=naeural-sdk-config,target=/root/.naeural,type=volume"
-  ]
+  ],
 
 
   "customizations": {
