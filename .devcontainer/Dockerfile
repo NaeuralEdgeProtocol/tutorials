@@ -14,7 +14,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     && rm -rf /var/lib/apt/lists/*
 
 # Install the SDK requirements
-RUN pip install --no-cache-dir naeural_client
+RUN pip install --no-cache-dir ratio1
 
 # Set the default command to bash (optional)
 CMD ["bash"]

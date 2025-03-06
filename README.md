@@ -11,7 +11,7 @@ pip --version
 
 Then we install our Naeural Edge Protocol SDK
 ```bash
-pip install --upgrade naeural_client
+pip install --upgrade ratio1
 ```
 
 We test the network using the `nepctl` command line interface
@@ -29,7 +29,7 @@ nepctl get nodes
 Just create a Session and assign the heartbeat processing callback to its `on_heartbeat` parameter.
 
 ```python
-from naeural_client import Session
+from ratio1 import Session
 
 def hb_handler(self, session: Session, node_addr: str, heartbeat: dict):
   """

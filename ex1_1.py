@@ -1,4 +1,4 @@
-from naeural_client import Session, PAYLOAD_DATA, HEARTBEAT_DATA
+from ratio1 import Session, PAYLOAD_DATA, HEARTBEAT_DATA
 
 
 class SimpleMessageHandler:

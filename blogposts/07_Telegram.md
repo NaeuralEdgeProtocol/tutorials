@@ -26,12 +26,12 @@ Forget about spinning up separate VMs or messing with complex DevOps pipelines. 
    You’ll need a **Ratio1 Edge Node** up and running. For testing, this can be on your local machine or a remote server. You can find instructions in our other tutorials on how to spin up a node with Docker so please refer to our specific posts and tutorials for more details on how to spin up a Ratio1 Edge Node both for the **free** faucet-based Testnet as well as for the Mainnet where on-chain (Base L2) Node Deed licensing is required.
 
 2. **Python & Ratio1 SDK**  
-   Ensure you have Python 3+ installed along with the Ratio1 SDK (`naeural_client`).  
+   Ensure you have Python 3+ installed along with the Ratio1 SDK (`ratio1`).  
    
    ```bash
-   pip install naeural_client --upgrade
+   pip install ratio1 --upgrade
    ```
-   > **Note**: The `naeural_client` will soon be migrated to `ratio1` package name.
+   > **Note**: The `ratio1` will soon be migrated to `ratio1` package name.
 
 3. **Telegram Bot Token**  
    Generate a Bot Token using @BotFather [BotFather](https://core.telegram.org/bots#6-botfather) on Telegram. You’ll insert this token into the code shortly.
@@ -50,7 +50,7 @@ Below is a basic Echo Bot designed to reply to user messages with a playful twis
 import os
 import time
 
-from naeural_client import Session, CustomPluginTemplate, PLUGIN_TYPES
+from ratio1 import Session, CustomPluginTemplate, PLUGIN_TYPES
 
 def reply(plugin: CustomPluginTemplate, message: str, user: str):
   """
@@ -109,7 +109,7 @@ Want to create something more interactive? **Blackjack Bot** showcases how to ha
 import os
 import time
 
-from naeural_client import Session, CustomPluginTemplate
+from ratio1 import Session, CustomPluginTemplate
 
 def reply(plugin, message: str, user: str):
   cards = ['2', '3', '4', '5', '6', '7', '8', '9',
@@ -141,7 +141,7 @@ def reply(plugin, message: str, user: str):
   return "Some relevant response based on the current Blackjack logic."
 
   ## NOTE: The full code is available in the Ratio1 SDK examples
-  ##       https://github.com/NaeuralEdgeProtocol/naeural_client/blob/main/tutorials/ex11_telegram_blackjack_bot.py
+  ##       https://github.com/ratio1/ratio1_sdk/blob/main/tutorials/ex11_telegram_blackjack_bot.py
 
 if __name__ == "__main__":
   my_node = os.getenv("EE_TARGET_NODE", "0xai_your_node_address")
