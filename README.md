@@ -1,5 +1,5 @@
 
-# Video Episodes for the ratio1's Naeural Edge Protocol SDK
+# Video Episodes for the Ratio1's SDK
 
 ## Episode #1 - Introduction
 
@@ -9,7 +9,7 @@ python --version
 pip --version
 ```
 
-Then we install our Naeural Edge Protocol SDK
+Then we install our Ratio1 SDK
 ```bash
 pip install --upgrade ratio1
 ```
@@ -125,7 +125,7 @@ nepctl config show
 and you copied the node address then on the target machine:
 
 ```bash
-docker run -d --rm --name r1node --pull=always -v r1vol:/edge_node/_local_cache/ naeural/edge_node:develop
+docker run -d --rm --name r1node --pull=always -v r1vol:/edge_node/_local_cache/ ratio1/edge_node:develop
 # wait a few seconds for the node to start
 sleep 3
 docker exec r1node get_node_info

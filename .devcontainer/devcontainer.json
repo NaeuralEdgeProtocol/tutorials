@@ -1,5 +1,5 @@
 {
-  "name" : "Naeural Edge Protocol SDK Development Container",
+  "name" : "Ratio1 SDK Development Container",
   
   "dockerFile" : "Dockerfile",
   
@@ -10,7 +10,7 @@
   ],
 
  "mounts": [
-    "source=naeural-sdk-config,target=/root/.naeural,type=volume"
+    "source=naeural-sdk-config,target=/root/.ratio1,type=volume"
   ],
 
 
